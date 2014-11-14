@@ -8,6 +8,16 @@ void hello(int* d_A){
 //	d_A[i] = i;
 	d_A[i] = i;
 	printf("D%d\t",d_A[i]);
+	
+	int *test;
+	gpuhello(2,2,test);
+
+}
+
+__device__
+void gpuhello(int d2_A, int d2_B, int * d2_C){
+	
+	*d2_C = d2_A + d2_B;
 
 }
 
